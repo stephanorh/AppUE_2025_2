@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dev.lchang.appue.presentation.auth.LoginScreen
+import dev.lchang.appue.presentation.auth.RegisterScreen
+import dev.lchang.appue.presentation.navigation.AppNavGraph
 import dev.lchang.appue.ui.theme.AppUETheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AppUETheme {
-                LoginScreen()
+                AppNavGraph()
             }
         }
     }

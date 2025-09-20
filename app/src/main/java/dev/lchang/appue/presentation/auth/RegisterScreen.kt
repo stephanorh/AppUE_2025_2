@@ -9,7 +9,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -19,17 +18,30 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
+
 @Composable
-fun LoginScreen(navController: NavController){
+fun RegisterScreen(navController: NavController){
+    var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    var confirmPassword by remember { mutableStateOf("") }
 
     Column(
-     modifier = Modifier.padding(16.dp)
-    ) {
-        Text("Iniciar Sesión", style =
-            MaterialTheme.typography.titleLarge)
+        modifier = Modifier.padding(16.dp)
+    ){
+        Spacer(modifier = Modifier.height(16.dp))
+        Text("Registro de Usuario", style = MaterialTheme.typography.titleLarge)
 
+        //OutlinedTextField for name
+        OutlinedTextField(
+            value = name,
+            onValueChange = { name = it },
+            label = { Text("Nombre") },
+            placeholder = { Text("Nombre") },
+            modifier = Modifier.fillMaxWidth()
+        )
+
+        //OutlinedTextField for email
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
@@ -38,6 +50,7 @@ fun LoginScreen(navController: NavController){
             modifier = Modifier.fillMaxWidth()
         )
 
+        //OutlinedTextField for password
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
@@ -46,18 +59,27 @@ fun LoginScreen(navController: NavController){
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        //OutlinedTextField for confirmPassword
+        OutlinedTextField(
+            value = confirmPassword,
+            onValueChange = { confirmPassword = it },
+            label = { Text("Confirmar Contraseña") },
+            placeholder = { Text("Confirmar Contraseña") },
+            modifier = Modifier.fillMaxWidth()
+        )
 
-        Button( onClick = {
-            if(email.isNotBlank() && password.isNotBlank()){
-                navController.navigate("home")
+        //Button for register
+        Button(onClick = {
+            if(email.isNotBlank()
+                && password.isNotBlank()
+                && password == confirmPassword){
+
+                navController.navigate("login")
             }
-        }, modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Iniciar Sesión")
+
+
+        }, modifier = Modifier.fillMaxWidth()) {
+            Text("Registrar")
         }
     }
-
-
-
 }
