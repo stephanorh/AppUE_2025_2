@@ -16,5 +16,5 @@ interface FavoriteCountryDao {
     suspend fun deleteFavoriteCountry(favoriteCountry: FavoriteCountryEntity)
     //Get All FavoriteCountryEntity
     @Query("SELECT * FROM favorite_countries")
-    suspend fun getAll(): Flow<List<FavoriteCountryEntity>>
+    fun getAll(): Flow<List<FavoriteCountryEntity>>
 }

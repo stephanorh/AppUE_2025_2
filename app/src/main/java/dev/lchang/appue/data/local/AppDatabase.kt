@@ -19,7 +19,6 @@ abstract class AppDatabase : RoomDatabase(){
                     "country_app_db"
                 ).build().also {INSTANCE = it}
             }
-
         }
     }
 }
