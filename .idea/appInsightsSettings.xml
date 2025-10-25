@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="dev.lchang.appue" />
+                  <option name="mobileSdkAppId" value="1:607737233763:android:cbb46fb1ecaf102157d356" />
+                  <option name="projectId" value="lchang-firebase-2025" />
+                  <option name="projectNumber" value="607737233763" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

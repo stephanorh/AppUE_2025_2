@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "607737233763",
+    "project_id": "lchang-firebase-2025",
+    "storage_bucket": "lchang-firebase-2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607737233763:android:cbb46fb1ecaf102157d356",
+        "android_client_info": {
+          "package_name": "dev.lchang.appue"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvKlbMJuwyNtGPGepMDT4ki0T16qqjQVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
