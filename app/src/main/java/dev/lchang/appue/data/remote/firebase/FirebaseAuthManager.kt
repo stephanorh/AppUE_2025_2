@@ -42,6 +42,8 @@ object FirebaseAuthManager {
 
     }
 
-
+    fun signOut() {
+        auth.signOut()
+    }
 
 }
