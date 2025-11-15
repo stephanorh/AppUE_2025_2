@@ -6,6 +6,7 @@ import androidx.core.app.NotificationCompat
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dev.lchang.appue.presentation.apifootball.ApiFootballScreen
 import dev.lchang.appue.presentation.auth.LoginScreen
 import dev.lchang.appue.presentation.auth.RegisterScreen
 import dev.lchang.appue.presentation.home.HomeScreen
@@ -36,6 +37,11 @@ fun AppNavGraph(){
         composable ("Favorites") {
             DrawerScaffold(navController) {
                 Text("Pantalla de favoritos próximamente")
+            }
+        }
+        composable ("football") {
+            DrawerScaffold(navController) {
+                ApiFootballScreen()
             }
         }
     }

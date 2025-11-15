@@ -67,6 +67,15 @@ fun DrawerScaffold(navController: NavController, content: @Composable () -> Unit
                         scope.launch { drawerState.close() }
                     }
                 )
+                //Favorites item
+                NavigationDrawerItem(
+                    label = {Text("Football")},
+                    selected = false,
+                    onClick = {
+                        navController.navigate("football")
+                        scope.launch { drawerState.close() }
+                    }
+                )
                 //Logout item
                 NavigationDrawerItem(
                     label = {Text("Cerrar Sesión")},
